@@ -56,7 +56,7 @@
     (modify-syntax-entry ?\'  "\""     table)
     (modify-syntax-entry ?/   ". 124b" table)
     (modify-syntax-entry ?*   ". 23b"  table)
-    (modify-syntax-entry ?\n  ">"      table)
+    (modify-syntax-entry ?\n  "> b"    table)
     (modify-syntax-entry ?#   "<"      table)
     table)
   "Syntax table for `hcl-ts-mode'.")
