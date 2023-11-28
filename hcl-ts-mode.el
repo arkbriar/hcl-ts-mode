@@ -70,7 +70,10 @@
      ((parent-is "block") parent-bol hcl-ts-mode-indent-offset)
      ((parent-is "object") parent-bol hcl-ts-mode-indent-offset)
      ((parent-is "tuple") parent-bol hcl-ts-mode-indent-offset)
+     ; function_arguments, the first argument will be indented
      ((parent-is "function_call") parent-bol hcl-ts-mode-indent-offset)
+     ; the left arguments will share the indentation of the function_arguments
+     ((parent-is "function_arguments") parent-bol 0)
      (no-node parent-bol 0)))
   "Tree-sitter indent rules for `hcl-ts-mode'.")
 
